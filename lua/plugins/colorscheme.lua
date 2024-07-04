@@ -1,11 +1,17 @@
 return {
   {
-    "sainnhe/gruvbox-material",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      vim.g.gruvbox_material_enable_italic = true
-      vim.cmd.colorscheme("gruvbox-material")
-    end,
+    opts = {
+      require("tokyonight").setup(),
+      vim.cmd([[colorscheme tokyonight]]),
+    },
+    {
+      "LazyVim/LazyVim",
+      opts = {
+        colorscheme = "tokyonight",
+      },
+    },
   },
 }
