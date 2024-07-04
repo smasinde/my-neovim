@@ -5,12 +5,11 @@ return {
     priority = 1000,
     opts = {
       require("tokyonight").setup(),
-      vim.cmd([[colorscheme tokyonight]]),
     },
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "tokyonight",
+        colorscheme = "tokyonight-day",
       },
     },
   },
